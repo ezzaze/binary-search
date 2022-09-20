@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "ezzaze/binary-search",
+    "description": "a PHP package for searching values in large arrays faster",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "ezzaze",
+        "binary-search"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/ezzaze/binary-search",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Marwane Ezzaze",
+            "email": "me@ezzaze.com",
             "role": "Developer"
         }
     ],
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Ezzaze\\BinarySearch\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Ezzaze\\BinarySearch\\Tests\\": "tests"
         }
     },
     "scripts": {
