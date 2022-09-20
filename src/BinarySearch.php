@@ -25,8 +25,9 @@ class BinarySearch
             sort($haystack, SORT_ASC);
         }
 
-        $start  = 0;
-        $end    = count($haystack) - 1;
+        $start = 0;
+        $end = count($haystack) - 1;
+
         return static::search($needle, $haystack, $start, $end);
     }
 
@@ -51,6 +52,7 @@ class BinarySearch
         } elseif ($haystack[$middle] > $needle) {
             return self::search($needle, $haystack, $start, $middle - 1);
         }
+
         return self::search($needle, $haystack, $middle + 1, $end);
     }
 }
