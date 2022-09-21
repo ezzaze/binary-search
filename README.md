@@ -1,6 +1,3 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # a PHP package for searching values in large arrays faster
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ezzaze/binary-search.svg?style=flat-square)](https://packagist.org/packages/ezzaze/binary-search)
