@@ -47,12 +47,12 @@ class BinarySearch
         }
 
         $middle = floor(($end + $start) / 2);
-        if ($haystack[$middle] == $needle) {
-            return true;
+        if ($haystack[$middle] < $needle) {
+            return self::search($needle, $haystack, $middle + 1, $end);
         } elseif ($haystack[$middle] > $needle) {
             return self::search($needle, $haystack, $start, $middle - 1);
         }
 
-        return self::search($needle, $haystack, $middle + 1, $end);
+        return true;
     }
 }
