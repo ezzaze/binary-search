@@ -17,10 +17,6 @@ class BinarySearch
      */
     public static function exists(mixed $needle, array $haystack, bool $sortHaystack = true): bool
     {
-        if (count($haystack) != count($haystack, COUNT_RECURSIVE)) {
-            throw new InvalidHaystackException('The haystack is a multidimensional array');
-        }
-
         if ($sortHaystack) {
             sort($haystack, SORT_ASC);
         }

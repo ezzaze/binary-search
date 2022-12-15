@@ -1,7 +1,6 @@
 <?php
 
 use Ezzaze\BinarySearch\BinarySearch;
-use Ezzaze\BinarySearch\Exceptions\InvalidHaystackException;
 
 it('can find item in array', function () {
     $haystack = range(0, 999999);
@@ -25,7 +24,16 @@ it('cannot find item in a disarray', function () {
     expect($result)->toBeFalse();
 });
 
-it('throws invalid haystack exception', function () {
-    $haystack = range(0, 999999);
-    $result = BinarySearch::exists(1000000, [$haystack]);
-})->throws(InvalidHaystackException::class, 'The haystack is a multidimensional array');
+it('can find subarray in array', function () {
+    $haystack = array_chunk(range(0, 999999), 2);
+    $result = BinarySearch::exists([60000, 60001], $haystack);
+
+    expect($result)->toBeTrue();
+});
+
+it('cannot find subarray in disarray', function () {
+    $haystack = array_chunk(range(0, 999999), 2);
+    shuffle($haystack);
+    $result = BinarySearch::exists([60000, 60001], $haystack, false);
+    expect($result)->toBeFalse();
+});
