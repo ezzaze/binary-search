@@ -32,6 +32,15 @@ $haystack = range(1,1000000);
 $result = BinarySearch::exists(500, $haystack, false);
 ```
 
+The package can also be used to search for multi-demensional array within another array as shown below
+```php
+use Ezzaze\BinarySearch\BinarySearch;
+
+$haystack = array_chunk(range(1,1000000), 2);
+$result1 = BinarySearch::exists([500,501], $haystack); //true
+$result2 = BinarySearch::exists([501, 502], $haystack); //false
+```
+
 ## Testing
 
 ```bash
